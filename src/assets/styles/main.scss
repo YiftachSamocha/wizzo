@@ -1,6 +1,7 @@
 // Setup
 @import "setup/variables";
 @import "setup/functions";
+@import "setup/mixin";
 
 
 // Basics
@@ -16,3 +17,4 @@
 @import "cmps/RealtyPodcast.scss";
 @import "cmps/RealtyVideo.scss";
 @import "cmps/RealtyFooter.scss";
+@import "cmps/RealtyCategory.scss";

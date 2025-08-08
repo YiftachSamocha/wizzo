@@ -1,25 +1,18 @@
 import { RealtyArticle } from "./RealtyArticle"
-import { RealtyTitle } from "./RealtyTitle"
 import articles from "../data/articles.json"
+import { getCategories } from "../service"
+import { RealtyCategory } from "./RealtyCategory"
 
-const categories = [
-    "נדל\"ן למגורים",
-    "התחדשות עירונית",
-    "נדל\"ן מניב והשקעות",
-    "דעות וניתוחים",
-    "חדשות הענף",
-    "הפנים מאחורי",
-    "עיצוב ואדריכלות"
-]
+const categories = getCategories()
 
 
 export function RealtyList() {
     return <section className="list">
         {categories.map(category => {
             return <div className="list-item">
-                <RealtyTitle />
+                <RealtyCategory category={category} />
                 <div>
-                    {articles.filter(article => article.category === category)
+                    {articles.filter(article => article.category === category.title)
                         .map(item => {
                             return <RealtyArticle article={item} />
                         })}

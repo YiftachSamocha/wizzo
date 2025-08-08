@@ -1,0 +1,42 @@
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: em(80px);
+
+    div {
+        display: flex;
+        gap: 15px;
+
+        .arrow {
+            @include lower-title;
+            text-align: right;
+            direction: rtl;
+            padding: 5px;
+
+        }
+
+        .thin-line {
+            height: 1px;
+            width: em(650px);
+            margin-top: em(23px);
+        }
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+
+
+        .title {
+            font-size: em(25px);
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        img {
+            margin-left: 10px;
+        }
+    }
+}

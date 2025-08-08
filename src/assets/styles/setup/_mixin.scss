@@ -1,0 +1,8 @@
+@mixin lower-title {
+    border-top-left-radius: 8px;
+    height: em(24px);
+    width: em(117px);
+    text-align: center;
+
+    white-space: nowrap;
+}

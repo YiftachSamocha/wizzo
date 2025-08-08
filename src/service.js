@@ -8,6 +8,7 @@ const CATEGORIES = [
     { title: "עיצוב ואדריכלות", color: '#F202D5' }
 ]
 export function getCategories(category) {
+    if(!category) return CATEGORIES
     return CATEGORIES.find(cat => cat.title === category).color
 }
 export function getRandomArticles(articles, num) {

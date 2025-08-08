@@ -14,13 +14,10 @@
        
 
         div {
+            @include lower-title;
             position: absolute;
             bottom: 0;
             right: 0;
-            border-top-left-radius: 8px;
-            height: em(37px);
-            width: em(117px);
-            text-align: center;
             background-color: #55EBB1;
         }
 
