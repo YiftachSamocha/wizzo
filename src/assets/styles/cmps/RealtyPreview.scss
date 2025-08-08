@@ -1,5 +1,60 @@
 .preview {
-    height: 500px;
-    width: 100%;
-    background-color: purple;
+    display: flex;
+    background-color: white;
+    margin-block: em(15px);
+    height: em(311px);
+    
+    padding: em(14px);
+    justify-content: space-between;
+    width: em(876px);
+
+    .preview-card {
+
+        position: relative;
+       
+
+        div {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-top-left-radius: 8px;
+            height: em(37px);
+            width: em(117px);
+            text-align: center;
+            background-color: #55EBB1;
+        }
+
+
+
+
+    }
+
+    .preview-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: right;
+        text-align: right;
+        flex-direction: column;
+        width: em(311px);
+        >p{
+            margin: 0;
+        }
+
+
+        >p:nth-child(1) {
+            color: $clr4;
+        }
+
+        >p:nth-child(2) {
+            font-weight: 700;
+            font-size: em(28px);
+            color: $clr3;
+        }
+
+        >p:nth-child(3) {
+            font-weight: 400;
+            color: $clr3;
+            font-size: em(18px);
+        }
+    }
 }

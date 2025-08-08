@@ -28,7 +28,7 @@
         >p {
             font-weight: 700;
             font-size: em(18px);
-            color: #404040;
+            color: $clr3;
         }
 
         div {
@@ -38,7 +38,7 @@
             font-weight: 400;
             font-size: em(14px);
             text-align: right;
-            color: #9c9b9b;
+            color: $clr4;
             gap: 3px;
         }
     }

@@ -1,15 +1,65 @@
 .home {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1px 3fr;
+    margin-inline: em(360px);
+    gap: 15px;
+
+    .ad-container {
+        background-color: white;
+        height: em(213px);
+        padding: 5px;
+        width: em(876px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    .vertical-line {
+        width: 1px;
+        height: 100%;
+        background-color: $clr5;
+    }
 
     .most-watched {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+
+        .watched-articles {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        h3 {
+            font-size: 28px;
+            text-align: right;
+            margin: 0;
+
+        }
+
+        .ad-container {
+            width: em(282px);
+            height: em(380px);
+
+        }
     }
 
-    .articles-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: em(10px);
+    .main-list {
+
+        .ad-container {
+            height: em(213px);
+            width: em(876px);
+        }
+
+
+        .articles-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: em(15px);
+            margin-bottom: em(15px);
+        }
     }
 }
