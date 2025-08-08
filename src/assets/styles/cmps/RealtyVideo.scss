@@ -1,23 +1,102 @@
 .video {
     display: flex;
-    
-    .video-list {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 15px;
+    flex-direction: column;
+    background-color: $clr6;
+    padding-inline: em(360px);
+    padding-block: em(112px);
 
-        .video-item {
-            background-color: pink;
-            height: 100px;
-            margin: 5px;
-        }
-
+    .category .title {
+        color: white;
     }
 
-    .video-preview {
-        background-color: pink;
-        height: 500px;
-        width: 500px;
+    .video-main {
+        display: flex;
+
+
+        .video-cont {
+            position: relative;
+
+            div {
+                @include lower-title;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background-color: $clr8;
+            }
+        }
+
+        .video-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+            p {
+                margin: 0;
+                text-align: right;
+                direction: rtl;
+            }
+
+            .title {
+                color: white;
+                margin-bottom: em(10px);
+                font-weight: 700;
+            }
+
+            .details {
+                color: $clr4;
+            }
+
+            .description {
+                color: white;
+                font-size: em(15px);
+            }
+        }
+
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            gap: em(20px);
+
+            .video-item {
+                background-color: $clr7;
+                display: flex;
+                width: em(617px);
+                height: em(183px);
+                justify-content: space-between;
+                padding: 12px;
+                gap: em(20px);
+
+                video {
+                    width: em(278px);
+                    height: em(160px);
+                }
+            }
+
+        }
+
+        .video-preview {
+            background-color: $clr7;
+            height: em(581px);
+            width: em(617px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: em(10px);
+
+            video {
+                width: em(595px);
+                
+                
+            }
+
+            .title {
+                font-size: em(25px);
+            }
+
+
+
+        }
     }
 }
