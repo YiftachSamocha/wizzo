@@ -1,5 +1,45 @@
-.article{
-    background-color: blue;
-    height: 200px;
-    width: 200px;
+.article {
+    height: em(316px);
+    width: em(282px);
+    text-align: right;
+    background-color: white;
+    padding: em(7px);
+
+    .article-card {
+        position: relative;
+
+        div {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-top-left-radius: 8px;
+            height: em(24px);
+            width: em(117px);
+            text-align: center;
+        }
+    }
+
+    .article-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: em(165px);
+
+        >p {
+            font-weight: 700;
+            font-size: em(18px);
+            color: #404040;
+        }
+
+        div {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            font-weight: 400;
+            font-size: em(14px);
+            text-align: right;
+            color: #9c9b9b;
+            gap: 3px;
+        }
+    }
 }

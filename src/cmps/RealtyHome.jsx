@@ -1,14 +1,19 @@
 import { RealtyAd } from "./RealtyAd"
 import { RealtyArticle } from "./RealtyArticle"
 import { RealtyPreview } from "./RealtyPreview"
+import articles from "../data/articles.json"
 
-const num = [1, 2, 3, 4, 5, 6]
-const nostWatched = [1, 2]
+function getMostViewed(articles) {
+    return [...articles]
+        .sort((a, b) => b.views - a.views)
+        .slice(0, 2)
+}
 export function RealtyHome() {
+    const mostViewed = getMostViewed(articles)
     return <section className="home">
         <div className="most-watched">
-            <div>{nostWatched.map(() => {
-                return <RealtyArticle />
+            <div>{mostViewed.map(item => {
+                return <RealtyArticle article={item} />
             })}</div>
             <RealtyAd />
 
@@ -17,8 +22,8 @@ export function RealtyHome() {
             <RealtyAd />
             <RealtyPreview />
             <div className="articles-list">
-                {num.map(() => {
-                    return <RealtyArticle />
+                {articles.map(item => {
+                    return <RealtyArticle article={item} />
                 })}
             </div>
 
