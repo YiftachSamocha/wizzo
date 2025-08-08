@@ -1,0 +1,14 @@
+.home {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    .most-watched {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .articles-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

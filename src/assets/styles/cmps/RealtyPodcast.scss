@@ -1,0 +1,13 @@
+.podcast {
+    .podcast-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .podcast-item {
+        background-color: aqua;
+        height: 200px;
+        width: 200px;
+        margin: 10px;
+    }
+}

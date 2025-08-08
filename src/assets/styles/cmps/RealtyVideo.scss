@@ -1,0 +1,23 @@
+.video {
+    display: flex;
+    
+    .video-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 15px;
+
+        .video-item {
+            background-color: pink;
+            height: 100px;
+            margin: 5px;
+        }
+
+    }
+
+    .video-preview {
+        background-color: pink;
+        height: 500px;
+        width: 500px;
+    }
+}
