@@ -20,7 +20,7 @@ const platforms = [
     { _id: 5, name: 'YouTube', img: youtubeImg },
     { _id: 6, name: 'X', img: xImg },
     { _id: 7, name: 'WhatsApp', img: whatsappImg }
-];
+]
 
 
 export function RealtyHeader() {
