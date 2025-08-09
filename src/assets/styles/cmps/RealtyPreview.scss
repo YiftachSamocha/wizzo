@@ -3,7 +3,7 @@
     background-color: white;
     margin-block: em(15px);
     height: em(311px);
-    
+
     padding: em(14px);
     justify-content: space-between;
     width: em(876px);
@@ -11,7 +11,7 @@
     .preview-card {
 
         position: relative;
-       
+
 
         div {
             @include lower-title;
@@ -33,22 +33,23 @@
         text-align: right;
         flex-direction: column;
         width: em(311px);
-        >p{
+
+        >p {
             margin: 0;
         }
 
 
-        >p:nth-child(1) {
+        .details {
             color: $clr4;
         }
 
-        >p:nth-child(2) {
+        .title {
             font-weight: 700;
             font-size: em(28px);
             color: $clr3;
         }
 
-        >p:nth-child(3) {
+        .description {
             font-weight: 400;
             color: $clr3;
             font-size: em(18px);

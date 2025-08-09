@@ -3,8 +3,9 @@
     //Header
     .header {
         height: em(77px);
-        padding: 10px;
+        padding: em(18px);
         justify-content: space-between;
+        margin-bottom: em(12px);
 
         .img-cont {
             background-color: inherit;
@@ -57,7 +58,7 @@
                 display: flex;
                 flex-direction: column;
 
-              
+
 
                 .header-top-menu {
                     display: flex;
@@ -68,18 +69,121 @@
                     flex-direction: column;
                 }
             }
-&.open{
-             transform: translateX(0);
+
+            &.open {
+                transform: translateX(0);
+            }
         }
+    }
+
+    //Homepage
+    .home {
+        grid-template-columns: 1fr;
+        margin-inline: em(16px);
+
+        .most-watched {
+            display: none;
         }
-        
 
 
+        .main-list {
+            .ad-container {
+                max-width: em(416px);
+                height: auto;
+
+            }
+
+            .ad-container.second {
+                display: none;
+            }
+
+            .preview {
+                flex-direction: column;
+                max-width: em(416px);
+                height: em(425px);
+
+                .preview-info {
+                    width: 100%;
+                    margin-bottom: em(30px);
+                    order: 2;
+
+                    .title {
+                        order: 1;
+                        font-size: em(20px);
+                    }
+
+                    .description {
+                        margin-block: em(15px);
+                        order: 2;
+                        font-size: em(15px);
+                    }
+
+                    .details {
+                        order: 3;
+                        font-size: em(10px);
+                    }
+                }
+
+                .preview-card {
+                    order: 1;
+
+                    img {
+                        width: em(395px);
+                        height: em(230px);
+                    }
+
+                }
+
+            }
+
+            .articles-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    //Article
+    .article {
+        display: flex;
+        justify-content: space-between;
+        height: em(106px);
+        width: em(416px);
+        padding: em(12px);
+
+        .article-info {
+            height: auto;
+
+            p {
+                margin: 0;
+            }
+
+            .title {
+                font-size: em(16px);
+            }
+        }
+
+        .article-card {
+            margin-left: em(22px);
+
+            div {
+                width: em(120px);
+                height: em(30px);
+
+
+                font-size: em(10px);
+
+            }
+
+            img {
+              width: auto;
+                height: 100%;
+            }
+        }
     }
 
     .list,
+
     .video,
-    .home,
     .footer,
     .podcast {
         display: none;

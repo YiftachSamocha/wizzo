@@ -9,10 +9,9 @@ export function RealtyArticle({ article }) {
             <div style={{ backgroundColor: getCategories(article.category) }}>{article.category}</div>
         </div>
         <div className="article-info">
-            <p>{article.title}</p>
-            <div>
-                <p>{article.date}</p> | <p>{article.writer}</p>
-            </div>
+            <p className="title">{article.title}</p>
+            <p className="details">{article.date} | {article.writer}</p>
+
         </div>
 
 

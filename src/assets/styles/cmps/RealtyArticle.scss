@@ -23,19 +23,17 @@
         justify-content: space-between;
         height: em(165px);
 
-        >p {
+        .title {
             font-weight: 700;
             font-size: em(18px);
             color: $clr3;
         }
 
-        div {
-            display: flex;
-            justify-content: right;
-            align-items: center;
+        .details {
             font-weight: 400;
             font-size: em(14px);
             text-align: right;
+            direction: rtl;
             color: $clr4;
             gap: 3px;
         }

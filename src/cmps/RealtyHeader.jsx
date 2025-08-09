@@ -32,14 +32,11 @@ export function RealtyHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < breakpoint);
-
-        }
-
-        window.addEventListener("resize", handleResize)
-        return () => window.removeEventListener("resize", handleResize)
-    }, [breakpoint])
+        const handleResize = () => setIsMobile(window.innerWidth < breakpoint)
+        handleResize()
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
 
     function toggleMenu() {
         if (!isMobile) return

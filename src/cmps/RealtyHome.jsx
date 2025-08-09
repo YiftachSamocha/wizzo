@@ -5,8 +5,27 @@ import adEilatImg from '../assets/img/ads/eilat.png'
 import adSnowImg from '../assets/img/ads/snow.png'
 import adPanelsImg from '../assets/img/ads/panels.png'
 import { getRandomArticles } from "../service"
+import { useEffect, useState } from "react"
+
+const ARTICLES_AMOUNT_DESKTOP = 6
+const ARTICLES_AMOUNT_MOBILE = 3
+const breakpoint = 440
 
 export function RealtyHome() {
+    const [articlesAmount, setArticlesAmount] = useState(ARTICLES_AMOUNT_DESKTOP)
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < breakpoint && articlesAmount !== ARTICLES_AMOUNT_MOBILE)
+                setArticlesAmount(ARTICLES_AMOUNT_MOBILE)
+            else if (window.innerWidth > breakpoint && articlesAmount !== ARTICLES_AMOUNT_DESKTOP)
+                setArticlesAmount(ARTICLES_AMOUNT_DESKTOP)
+
+        }
+
+        window.addEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize)
+    }, [])
 
     return <section className="home">
         <div className="most-watched">
@@ -19,10 +38,6 @@ export function RealtyHome() {
             </div>
             <RealtyArticle article={getRandomArticles(articles, 1)[0]} />
 
-
-
-
-
         </div>
         <div className="vertical-line"></div>
         <div className="main-list">
@@ -32,12 +47,12 @@ export function RealtyHome() {
 
             <RealtyPreview />
             <div className="articles-list">
-                {getRandomArticles(articles, 6).map(item => {
+                {getRandomArticles(articles, articlesAmount).map(item => {
                     return <RealtyArticle article={item} />
                 })}
             </div>
 
-            <div className="ad-container">
+            <div className="ad-container second">
                 <img src={adSnowImg} />
             </div>
 

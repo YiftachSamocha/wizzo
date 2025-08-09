@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import doronImg from '../assets/img/doron.png'
 const article = {
     date: '11-06',
@@ -8,12 +9,18 @@ const article = {
     description: 'כשנתיים לאחר הזכייה במכרז דיירים, אושרה תוכנית העיצוב האדריכלי לפרויקט פינוי-בינוי במסגרתו ייהרסו במרכז ת"א 66 דירות וייבנה מגדל בן 25 קומות'
 
 }
+const breakpoint = 440
 export function RealtyPreview() {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint)
+
+
+
+
     return <section className='preview'>
         <div className='preview-info'>
-            <p>{article.date} | {article.writer}</p>
-            <p>{article.title}</p>
-            <p>{article.description}</p>
+            <p className='details'>{article.date} | {article.writer}</p>
+            <p className='title'>{article.title}</p>
+            <p className='description'>{article.description}</p>
         </div>
         <div className='preview-card'>
             <img src={article.img} />
