@@ -28,11 +28,11 @@ const breakpoint = 440
 
 
 export function RealtyHeader() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint)
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < breakpoint)
+        const handleResize = () => setIsMobile(window.innerWidth <= breakpoint)
         handleResize()
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)

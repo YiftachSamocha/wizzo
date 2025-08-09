@@ -44,6 +44,7 @@
                 color: white;
                 text-align: right;
                 direction: rtl;
+                cursor: pointer;
             }
 
             .title {
@@ -53,6 +54,7 @@
 
             .read-more {
                 color: $clr10;
+                cursor: pointer;
             }
         }
     }

@@ -16,7 +16,7 @@ export function RealtyHome() {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth < BREAKPOINT && articlesAmount !== ARTICLES_AMOUNT_MOBILE)
+            if (window.innerWidth <= BREAKPOINT && articlesAmount !== ARTICLES_AMOUNT_MOBILE)
                 setArticlesAmount(ARTICLES_AMOUNT_MOBILE)
             else if (window.innerWidth > BREAKPOINT && articlesAmount !== ARTICLES_AMOUNT_DESKTOP)
                 setArticlesAmount(ARTICLES_AMOUNT_DESKTOP)

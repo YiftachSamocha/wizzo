@@ -12,10 +12,10 @@ const CATEGORIES_AMOUNT_MOBILE = 1
 
 
 export function RealtyList() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < BREAKPOINT)
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= BREAKPOINT)
     const [categories, setCategories] = useState(CATEGORIES_DATA)
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < BREAKPOINT)
+        const handleResize = () => setIsMobile(window.innerWidth <= BREAKPOINT)
         handleResize()
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)

@@ -1,14 +1,15 @@
 @media (max-width: $mobile-breakpoint) {
 
     .video {
-        padding-inline: em(9px);
+        padding-inline: em(18px);
+        padding-block: em(130px);
 
         .video-main {
             flex-direction: column;
 
             .video-preview {
                 order: 1;
-                height: em(425px);
+                height: em(410px);
                 width: auto;
                 margin-bottom: em(20px);
 
@@ -16,8 +17,9 @@
                     height: em(220px);
 
                     video {
-                        height: em(220px);
-                        width: auto;
+                       
+                        width: em(383px);
+                        height: auto;
                     }
                 }
 
@@ -33,17 +35,28 @@
                     .description {
                         order: 2;
                         font-size: em(12px);
+                        margin-bottom: em(5px);
                     }
 
                     .details {
                         order: 3;
                         font-size: em(10px);
+
                     }
                 }
             }
 
             .video-list {
                 order: 2;
+                .video-item{
+                    width: em(402px);
+                    .video-cont div{
+                        width: em(70px);
+                        height: em(25px);
+                        font-size: em(12px);
+                    }
+                }
+                
             }
         }
     }

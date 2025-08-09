@@ -9,6 +9,8 @@
             background-color: inherit;
             height: em(53px);
             width: em(150px);
+            display: flex;
+            justify-content: right;
 
 
             img {
@@ -22,8 +24,9 @@
             width: em(100px);
             height: em(100px);
             display: flex;
-            justify-content: center;
+            justify-content: left;
             align-items: center;
+            margin-left: em(10px);
 
             img {
                 max-width: fit-content;
@@ -64,7 +67,13 @@
                     width: auto;
                     height: 100%;
                     margin: em(25px);
+                    margin-top: 0;
                     flex-direction: column;
+                    order: 1;
+                }
+
+                .platforms{
+                    order: 2;
                 }
             }
 
