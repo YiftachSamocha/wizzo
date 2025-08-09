@@ -1,10 +1,11 @@
 .list {
     margin-inline: em(360px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
     gap: em(70px);
+    
     .list-item {
         >div {
             display: flex;

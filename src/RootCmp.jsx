@@ -16,7 +16,6 @@ export function RootCmp() {
         <RealtyVideo />
         <RealtyPodacst />
         <RealtyFooter />
-
     </div>
 
 

@@ -3,24 +3,34 @@
     height: em(114px);
     display: flex;
     margin-bottom: 50px;
+    background-color: $clr1;
+    justify-content: right;
+    width: 100%;
+    align-items: center;
 
 
 
 
-    >img {
-        height: em(68px);
-        margin: em(34px);
 
+
+    .img-cont {
+        background-color: white;
+
+        img {
+            height: em(68px);
+            margin: em(34px);
+
+        }
     }
 
 
     .header-main {
-        width: em(1686px);
+        width: em(1850px);
 
         .header-top {
             display: flex;
             justify-content: space-between;
-            background-color: $clr1;
+
 
             height: em(57px);
             padding-inline: em(20px);
@@ -68,6 +78,7 @@
             align-items: center;
             height: em(57px);
             padding-inline: em(20px);
+            background-color: white;
 
             .header-bottom-menu {
                 width: em(777px);

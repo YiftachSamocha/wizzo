@@ -2,7 +2,9 @@
     display: grid;
     grid-template-columns: 1fr 1px 3fr;
     margin-inline: em(360px);
+    margin-bottom: em(100px);
     gap: 15px;
+   
 
     .ad-container {
         background-color: white;
@@ -34,7 +36,7 @@
         }
 
         h3 {
-            font-size: 28px;
+            font-size: em(28px);
             text-align: right;
             margin: 0;
 
@@ -48,6 +50,7 @@
     }
 
     .main-list {
+        
 
         .ad-container {
             height: em(213px);
@@ -58,7 +61,7 @@
         .articles-list {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: em(15px);
+            gap: em(10px);
             margin-bottom: em(15px);
         }
     }

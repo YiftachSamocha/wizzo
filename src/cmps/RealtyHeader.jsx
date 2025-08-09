@@ -8,6 +8,9 @@ import youtubeImg from '../assets/img/icons/youtube.png'
 import xImg from '../assets/img/icons/x.png'
 import whatsappImg from '../assets/img/icons/whatsapp.png'
 import searchImg from "../assets/img/icons/search.png"
+import { useEffect, useState } from 'react'
+import menuImg from "../assets/img/menu.png"
+import logoMobileImg from '../assets/img/logo-mobile.png'
 
 
 const TOP_HEADER_DATA = headerData.filter(item => item.location === 'top')
@@ -21,11 +24,33 @@ const platforms = [
     { _id: 6, name: 'X', img: xImg },
     { _id: 7, name: 'WhatsApp', img: whatsappImg }
 ]
+const breakpoint = 440
 
 
 export function RealtyHeader() {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < breakpoint);
+
+        }
+
+        window.addEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize)
+    }, [breakpoint])
+
+    function toggleMenu() {
+        if (!isMobile) return
+        setIsMenuOpen(prev => !prev)
+    }
+
     return <section className="header">
-        <div className="header-main">
+        {isMobile && <div className='menu-cont' onClick={toggleMenu}>
+            <img src={menuImg} />
+        </div>}
+        < div className={`header-main${isMenuOpen ? ' open' : ''}`}>
 
             <div className='header-top'>
                 <div className='platforms'>
@@ -57,12 +82,15 @@ export function RealtyHeader() {
                 </div>
 
             </div>
+
         </div>
 
-        <img src={logoImg} />
+        <div className='img-cont'> <img src={isMobile ? logoMobileImg : logoImg} /></div>
 
 
 
-    </section>
+
+
+    </section >
 
 }
