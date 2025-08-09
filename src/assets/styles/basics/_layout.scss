@@ -80,6 +80,7 @@
     .home {
         grid-template-columns: 1fr;
         margin-inline: em(16px);
+        margin-bottom: em(40px);
 
         .most-watched {
             display: none;
@@ -175,13 +176,34 @@
             }
 
             img {
-              width: auto;
+                width: auto;
                 height: 100%;
             }
         }
     }
 
-    .list,
+    //List
+    .list {
+        margin-inline: em(18px);
+        .list-item {
+
+
+            .category {
+                div img{
+                    margin: 0;
+                }
+                .thin-line {
+                    display: none;
+                }
+                .arrow{
+                    width: em(32px);
+                }
+            }
+            .items{
+                flex-direction: column;
+            }
+        }
+    }
 
     .video,
     .footer,
