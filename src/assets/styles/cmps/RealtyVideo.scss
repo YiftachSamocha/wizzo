@@ -86,7 +86,7 @@
             padding: em(10px);
 
             video {
-                width: em(595px);
+                width: em(580px);
                 
                 
             }
@@ -97,6 +97,28 @@
 
 
 
+        }
+        .video-list{
+            .video-item{
+                width: em(395px);
+                height: em(148px);
+                align-items: center;
+                .video-cont{
+                    height: em(100px);
+                    video{
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+            }
+            .video-info{
+                .title{
+                    font-size: em(14px);
+                }
+                .details{
+                    font-size: em(10px);
+                }
+            }
         }
     }
 }

@@ -182,30 +182,83 @@
         }
     }
 
-    //List
+    //category
+    .category {
+        div img {
+            margin: 0;
+        }
+
+        .thin-line {
+            display: none;
+        }
+
+        div .arrow {
+            width: em(32px);
+        }
+
+        //List
+
+
+    }
+
     .list {
         margin-inline: em(18px);
-        .list-item {
+
+        .list-item {}
+
+        .items {
+            flex-direction: column;
+        }
+    }
+
+    .video {
+        padding-inline: em(9px);
+
+        .video-main {
+            flex-direction: column;
+
+            .video-preview {
+                order: 1;
+                height: em(425px);
+                width: auto;
+                margin-bottom: em(20px);
+
+                .video-cont {
+                    height: em(220px);
+
+                    video {
+                        height: em(220px);
+                        width: auto;
+                    }
+                }
+
+                .video-info {
+                    padding-block: em(9px);
 
 
-            .category {
-                div img{
-                    margin: 0;
-                }
-                .thin-line {
-                    display: none;
-                }
-                .arrow{
-                    width: em(32px);
+                    .title {
+                        order: 1;
+                        font-size: em(20px);
+                    }
+
+                    .description {
+                        order: 2;
+                        font-size: em(12px);
+                    }
+
+                    .details {
+                        order: 3;
+                        font-size: em(10px);
+                    }
                 }
             }
-            .items{
-                flex-direction: column;
+
+            .video-list {
+                order: 2;
             }
         }
     }
 
-    .video,
     .footer,
     .podcast {
         display: none;
