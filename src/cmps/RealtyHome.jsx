@@ -9,16 +9,16 @@ import { useEffect, useState } from "react"
 
 const ARTICLES_AMOUNT_DESKTOP = 6
 const ARTICLES_AMOUNT_MOBILE = 3
-const breakpoint = 440
+const BREAKPOINT = 440
 
 export function RealtyHome() {
     const [articlesAmount, setArticlesAmount] = useState(ARTICLES_AMOUNT_DESKTOP)
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth < breakpoint && articlesAmount !== ARTICLES_AMOUNT_MOBILE)
+            if (window.innerWidth < BREAKPOINT && articlesAmount !== ARTICLES_AMOUNT_MOBILE)
                 setArticlesAmount(ARTICLES_AMOUNT_MOBILE)
-            else if (window.innerWidth > breakpoint && articlesAmount !== ARTICLES_AMOUNT_DESKTOP)
+            else if (window.innerWidth > BREAKPOINT && articlesAmount !== ARTICLES_AMOUNT_DESKTOP)
                 setArticlesAmount(ARTICLES_AMOUNT_DESKTOP)
 
         }
@@ -31,7 +31,7 @@ export function RealtyHome() {
         <div className="most-watched">
             <h3>הכתבות הנצפות ביותר</h3>
             <div className="watched-articles">{getRandomArticles(articles, 2).map(item => {
-                return <RealtyArticle article={item} />
+                return <RealtyArticle article={item} key={item._id} />
             })}</div>
             <div className="ad-container">
                 <img src={adPanelsImg} />
@@ -48,7 +48,7 @@ export function RealtyHome() {
             <RealtyPreview />
             <div className="articles-list">
                 {getRandomArticles(articles, articlesAmount).map(item => {
-                    return <RealtyArticle article={item} />
+                    return <RealtyArticle article={item} key={item._id} />
                 })}
             </div>
 

@@ -1,12 +1,12 @@
 import articleImg from "../assets/img/article.jpg"
-import { getCategories } from "../service"
+import { getCategoryColor } from "../service"
 
 export function RealtyArticle({ article }) {
 
     return <div className="article">
         <div className="article-card">
             <img src={articleImg} alt="" />
-            <div style={{ backgroundColor: getCategories(article.category) }}>{article.category}</div>
+            <div style={{ backgroundColor: getCategoryColor(article.category) }}>{article.category}</div>
         </div>
         <div className="article-info">
             <p className="title">{article.title}</p>

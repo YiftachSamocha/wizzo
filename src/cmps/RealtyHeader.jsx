@@ -52,14 +52,14 @@ export function RealtyHeader() {
             <div className='header-top'>
                 <div className='platforms'>
                     {platforms.map(item => {
-                        return <div>
+                        return <div key={item._id}>
                             <img src={item.img} />
                         </div>
                     })}
                 </div>
                 <div className='header-top-menu'>
                     {TOP_HEADER_DATA.map(item => {
-                        return <a href="">{item.title}</a>
+                        return <a key={item._id} href="" onClick={e=> e.preventDefault()}>{item.title} </a>
                     })}
                 </div>
 
@@ -73,7 +73,7 @@ export function RealtyHeader() {
                 </div>
                 <div className='header-bottom-menu'>
                     {BOTTOM_HEADER_DATA.map(item => {
-                        return <a href="">{item.title}</a>
+                        return <a key={item._id} href="" onClick={e=> e.preventDefault()}>{item.title}</a>
                     })}
 
                 </div>

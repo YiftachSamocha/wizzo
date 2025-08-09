@@ -1,11 +1,10 @@
 import { RealtyArticle } from "./RealtyArticle"
 import articles from "../data/articles.json"
-import { getCategories } from "../service"
 import { RealtyCategory } from "./RealtyCategory"
 import { useEffect, useState } from "react"
 
-const CATEGORIES_DATA = getCategories()
-const breakpoint = 440
+import CATEGORIES_DATA from '../data/categories.json' 
+const BREAKPOINT = 440
 const CATEGORIES_AMOUNT_DESKTOP = 7
 const CATEGORIES_AMOUNT_MOBILE = 1
 
@@ -13,10 +12,10 @@ const CATEGORIES_AMOUNT_MOBILE = 1
 
 
 export function RealtyList() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint)
+    const [isMobile, setIsMobile] = useState(window.innerWidth < BREAKPOINT)
     const [categories, setCategories] = useState(CATEGORIES_DATA)
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < breakpoint)
+        const handleResize = () => setIsMobile(window.innerWidth < BREAKPOINT)
         handleResize()
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
@@ -31,12 +30,12 @@ export function RealtyList() {
     }, [isMobile])
     return <section className="list">
         {categories.map(category => {
-            return <div className="list-item">
+            return <div className="list-item" key={category.title}>
                 <RealtyCategory category={category} />
                 <div className="items">
                     {articles.filter(article => article.category === category.title)
                         .map(item => {
-                            return <RealtyArticle article={item} />
+                            return <RealtyArticle article={item} key={item._id}/>
                         })}
                 </div>
 

@@ -11,13 +11,13 @@ export function RealtyVideo() {
         <div className="video-main">
             <div className="video-list">
                 {videos.map(video => {
-                    return <div className="video-item">
+                    return <div className="video-item" key={video._id}>
                         <div className="video-info">
                             <p className="title">{video.title}</p>
                             <p className="details">{video.date} | {'מרכז הנדל\"ן'}</p>
                         </div>
                         <div className="video-cont">
-                            <video src={video.url} controls>  </video>
+                            <video src={video.url} controls >  </video>
                             <div>{'נדל\"ן TV'}</div>
                         </div>
 
@@ -36,7 +36,7 @@ export function RealtyVideo() {
                         <p className="title">{videoPreview.title}</p>
                         <p className="description">{videoPreview.description}</p>
                     </div>
-                    
+
                 </div>
 
 

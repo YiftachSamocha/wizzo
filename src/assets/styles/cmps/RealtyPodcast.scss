@@ -4,6 +4,7 @@
     .podcast-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: em(25px);
     }
 
     .podcast-item {
@@ -11,8 +12,7 @@
         justify-content: space-between;
         background-color: white;
         height: em(248px);
-        width: em(617px);
-        margin: 10px;
+        width: em(560px);
         padding: 10px;
 
 
@@ -22,8 +22,8 @@
             
 
             img {
-                width: em(240px);
-                height: em(250px);
+                max-width: em(160px);
+                height: 100%;
                 
             }
 

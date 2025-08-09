@@ -10,7 +10,7 @@ export function RealtyPodacst() {
 
         <div className="podcast-list">
             {podcasts.map(podcast => {
-                return <div className="podcast-item">
+                return <div className="podcast-item" key={podcast._id}>
                     <div className='podcast-icons'>
                         <img src={headphonesImg} />
                         <img src={playerImg} />

@@ -1,0 +1,17 @@
+@media (max-width: $mobile-breakpoint) {
+    .category {
+        div img {
+            margin: 0;
+        }
+
+        .thin-line {
+            display: none;
+        }
+
+        div .arrow {
+            width: em(32px);
+        }
+
+    }
+
+}

@@ -1,0 +1,40 @@
+@media (max-width: $mobile-breakpoint) {
+    .article {
+        display: flex;
+        justify-content: space-between;
+        height: em(106px);
+        width: em(416px);
+        padding: em(12px);
+
+        .article-info {
+            height: auto;
+
+            p {
+                margin: 0;
+            }
+
+            .title {
+                font-size: em(16px);
+            }
+        }
+
+        .article-card {
+            margin-left: em(22px);
+
+            div {
+                width: em(120px);
+                height: em(30px);
+
+
+                font-size: em(10px);
+
+            }
+
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+
+}

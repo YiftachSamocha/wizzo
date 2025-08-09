@@ -1,0 +1,56 @@
+@media (max-width: $mobile-breakpoint) {
+
+    .video {
+        padding-inline: em(9px);
+
+        .video-main {
+            flex-direction: column;
+
+            .video-preview {
+                order: 1;
+                height: em(425px);
+                width: auto;
+                margin-bottom: em(20px);
+
+                .video-cont {
+                    height: em(220px);
+
+                    video {
+                        height: em(220px);
+                        width: auto;
+                    }
+                }
+
+                .video-info {
+                    padding-block: em(9px);
+
+
+                    .title {
+                        order: 1;
+                        font-size: em(20px);
+                    }
+
+                    .description {
+                        order: 2;
+                        font-size: em(12px);
+                    }
+
+                    .details {
+                        order: 3;
+                        font-size: em(10px);
+                    }
+                }
+            }
+
+            .video-list {
+                order: 2;
+            }
+        }
+    }
+
+    .footer,
+    .podcast {
+        display: none;
+    }
+
+}

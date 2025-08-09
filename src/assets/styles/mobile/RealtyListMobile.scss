@@ -1,0 +1,9 @@
+@media (max-width: $mobile-breakpoint) {
+    .list {
+        margin-inline: em(18px);
+        .items {
+            flex-direction: column;
+        }
+    }
+
+}

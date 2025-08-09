@@ -3,7 +3,8 @@
 @import "setup/functions";
 @import "setup/mixin";
 
-
+// Basics
+@import "basics/base";
 
 //Cmps
 @import "cmps/RealtyHome.scss";
@@ -16,7 +17,10 @@
 @import "cmps/RealtyFooter.scss";
 @import "cmps/RealtyCategory.scss";
 
-
-// Basics
-@import "basics/layout";
-@import "basics/base";
+//Mobile
+@import "mobile/RealtyHomeMobile.scss";
+@import "mobile/RealtyCategoryMobile.scss";
+@import "mobile/RealtyArticleMobile.scss";
+@import "mobile/RealtyHeaderMobile.scss";
+@import "mobile/RealtyListMobile.scss";
+@import "mobile/RealtyVideoMobile.scss";

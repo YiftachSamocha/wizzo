@@ -54,14 +54,14 @@
 
         .ad-container {
             height: em(213px);
-            width: em(876px);
+            width: em(820px);
         }
 
 
         .articles-list {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: em(10px);
+            gap: em(5px);
             margin-bottom: em(15px);
         }
     }
