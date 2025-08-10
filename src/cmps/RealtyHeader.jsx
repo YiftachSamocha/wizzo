@@ -12,10 +12,9 @@ import { useEffect, useState } from 'react'
 import menuImg from "../assets/img/menu.png"
 import logoMobileImg from '../assets/img/logo-mobile.png'
 
-
 const TOP_HEADER_DATA = headerData.filter(item => item.location === 'top')
 const BOTTOM_HEADER_DATA = headerData.filter(item => item.location === 'bottom')
-const platforms = [
+const PLATFORMS = [
     { _id: 1, name: 'Instagram', img: instagramImg },
     { _id: 2, name: 'Facebook', img: facebookImg },
     { _id: 3, name: 'TikTok', img: tiktokImg },
@@ -24,15 +23,14 @@ const platforms = [
     { _id: 6, name: 'X', img: xImg },
     { _id: 7, name: 'WhatsApp', img: whatsappImg }
 ]
-const breakpoint = 440
-
+const BREAKPOINT = 440
 
 export function RealtyHeader() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint)
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= BREAKPOINT)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= breakpoint)
+        const handleResize = () => setIsMobile(window.innerWidth <= BREAKPOINT)
         handleResize()
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
@@ -42,16 +40,15 @@ export function RealtyHeader() {
         if (!isMobile) return
         setIsMenuOpen(prev => !prev)
     }
-
+    
     return <section className="header">
         {isMobile && <div className='menu-cont' onClick={toggleMenu}>
             <img src={menuImg} />
         </div>}
         < div className={`header-main${isMenuOpen ? ' open' : ''}`}>
-
             <div className='header-top'>
                 <div className='platforms'>
-                    {platforms.map(item => {
+                    {PLATFORMS.map(item => {
                         return <div key={item._id}>
                             <img src={item.img} />
                         </div>
@@ -59,11 +56,9 @@ export function RealtyHeader() {
                 </div>
                 <div className='header-top-menu'>
                     {TOP_HEADER_DATA.map(item => {
-                        return <a key={item._id} href="" onClick={e=> e.preventDefault()}>{item.title} </a>
+                        return <a key={item._id} href="" onClick={e => e.preventDefault()}>{item.title} </a>
                     })}
                 </div>
-
-
             </div>
             <div className='header-bottom'>
                 <div className='header-input'>
@@ -73,21 +68,11 @@ export function RealtyHeader() {
                 </div>
                 <div className='header-bottom-menu'>
                     {BOTTOM_HEADER_DATA.map(item => {
-                        return <a key={item._id} href="" onClick={e=> e.preventDefault()}>{item.title}</a>
+                        return <a key={item._id} href="" onClick={e => e.preventDefault()}>{item.title}</a>
                     })}
-
                 </div>
-
             </div>
-
         </div>
-
         <div className='img-cont'> <img src={isMobile ? logoMobileImg : logoImg} /></div>
-
-
-
-
-
     </section >
-
 }

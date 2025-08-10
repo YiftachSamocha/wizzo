@@ -8,6 +8,7 @@ import youtubeImg from '../assets/img/icons-footer/youtube.png'
 import facebookImg from '../assets/img/icons-footer/facebook.png'
 import footerData from '../data/footer.json'
 import wizzoImg from '../assets/img/wizzo.png'
+import arrowDownImg from '../assets/img/arrow-down.png'
 
 const PLATFORMS = [
     { _id: 1, name: 'Instagram', img: instagramImg },
@@ -41,23 +42,25 @@ export function RealtyFooter() {
                             .map(item => {
                                 return <p key={item._id}>{item.title}</p>
                             })}
-                        <p className='read-more'>קרא עוד ↓</p>
+                        <div className='read-more'>
+                            <img src={arrowDownImg} />
+                            <p>קרא עוד</p>
+                        </div>
                     </div>
                 </div>
             })}
-
         </div>
         <div className='lower-footer'>
-            <p>© כל הזכויות שמורות למרכז הנדל"ן ישראל - סקאלה ד.מ בע"מ Scala Group D.M</p>
-            <div className='dev'>
-                <img src={wizzoImg} />
-                <p>פיתוח האתר</p>
-
-            </div>
-            <div className='design'>
-                <p>Yiftach Samocha</p>
-                <p>אפיון ועיצוב האתר</p>
-
+            <div className='lower-cont'>
+                <p>© כל הזכויות שמורות למרכז הנדל"ן ישראל - סקאלה ד.מ בע"מ Scala Group D.M</p>
+                <div className='dev'>
+                    <img src={wizzoImg} />
+                    <p>פיתוח האתר</p>
+                </div>
+                <div className='design'>
+                    <p>Yiftach Samocha</p>
+                    <p>אפיון ועיצוב האתר</p>
+                </div>
             </div>
         </div>
     </section>

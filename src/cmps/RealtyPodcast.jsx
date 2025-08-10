@@ -6,8 +6,6 @@ import { RealtyCategory } from './RealtyCategory'
 export function RealtyPodacst() {
     return <section className="podcast">
         <RealtyCategory category={{ title: 'פודקאסטים', color: '#d10e89' }} />
-
-
         <div className="podcast-list">
             {podcasts.map(podcast => {
                 return <div className="podcast-item" key={podcast._id}>
@@ -15,7 +13,6 @@ export function RealtyPodacst() {
                         <img src={headphonesImg} />
                         <img src={playerImg} />
                     </div>
-
                     <div className='podcast-info'>
                         <div>
                             <p className='host'>{podcast.host}</p>
@@ -28,12 +25,8 @@ export function RealtyPodacst() {
                         <img src={podcast.img} />
                         <div>פודקאסטים</div>
                     </div>
-
                 </div>
             })}
-
-
         </div>
-
     </section>
 }

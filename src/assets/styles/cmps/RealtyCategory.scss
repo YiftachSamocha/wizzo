@@ -5,7 +5,7 @@
     width: 100%;
     height: em(80px);
 
-    div {
+    >div {
         display: flex;
         gap: 15px;
 
@@ -14,12 +14,20 @@
             text-align: right;
             direction: rtl;
             padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            img{
+                height: em(10px);
+                width: auto;
+            }
 
         }
 
         .thin-line {
             height: 1px;
-            width: em(650px);
+            width: em(785px);
             margin-top: em(23px);
         }
     }

@@ -1,13 +1,11 @@
 @media (max-width: $mobile-breakpoint) {
      .home {
         grid-template-columns: 1fr;
-        margin-inline: em(16px);
         margin-bottom: em(40px);
 
         .most-watched {
             display: none;
         }
-
 
         .main-list {
             .ad-container {
@@ -49,6 +47,7 @@
 
                 .preview-card {
                     order: 1;
+                    width: em(395px);
 
                     img {
                         width: em(395px);

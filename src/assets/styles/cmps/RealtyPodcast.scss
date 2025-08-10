@@ -1,5 +1,4 @@
 .podcast {
-    padding-inline: em(360px);
     margin-block: em(100px);
     .podcast-list {
         display: grid;
@@ -24,6 +23,7 @@
             img {
                 max-width: em(160px);
                 height: 100%;
+                object-fit: cover
                 
             }
 
@@ -33,11 +33,7 @@
                 bottom: 0;
                 right: 0;
                 background-color: $clr8;
-
             }
-
-
-
         }
 
         .podcast-info {

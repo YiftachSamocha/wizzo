@@ -1,13 +1,11 @@
 import { RealtyCategory } from "./RealtyCategory"
-import videosData from '../data/videos.json'
-const videos = videosData.slice(1, 4)
-const videoPreview = videosData.slice(0, 1)[0]
-
-
+import VIDEOS_DATA from '../data/videos.json'
+const videos = VIDEOS_DATA.slice(1, 4)
+const videoPreview = VIDEOS_DATA.slice(0, 1)[0]
 
 export function RealtyVideo() {
     return <section className="video">
-        <RealtyCategory category={{ title: "נדל\"ן TV", color: '#d10e89' }} />
+        <RealtyCategory category={{ title: "TV נדל\"ן", color: '#d10e89' }} />
         <div className="video-main">
             <div className="video-list">
                 {videos.map(video => {
@@ -18,17 +16,16 @@ export function RealtyVideo() {
                         </div>
                         <div className="video-cont">
                             <video src={video.url} controls >  </video>
-                            <div>{'נדל\"ן TV'}</div>
+                            <div>{'TV נדל\"ן'}</div>
                         </div>
 
                     </div>
                 })}
-
             </div>
             <div className="video-preview">
                 <div className="video-cont">
                     <video src={videoPreview.url} controls>  </video>
-                    <div>{'נדל\"ן TV'}</div>
+                    <div>{'TV נדל\"ן'}</div>
                 </div>
                 <div>
                     <div className="video-info">
@@ -36,13 +33,8 @@ export function RealtyVideo() {
                         <p className="title">{videoPreview.title}</p>
                         <p className="description">{videoPreview.description}</p>
                     </div>
-
                 </div>
-
-
             </div>
         </div>
-
-
     </section>
 }

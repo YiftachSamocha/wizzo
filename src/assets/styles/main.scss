@@ -2,11 +2,10 @@
 @import "setup/variables";
 @import "setup/functions";
 @import "setup/mixin";
-
-// Basics
-@import "basics/base";
+@import "setup/base";
 
 //Cmps
+@import "RootCmp.scss";
 @import "cmps/RealtyHome.scss";
 @import "cmps/RealtyArticle.scss";
 @import "cmps/RealtyHeader.scss";

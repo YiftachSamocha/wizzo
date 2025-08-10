@@ -37,30 +37,21 @@ export function RealtyHome() {
                 <img src={adPanelsImg} />
             </div>
             <RealtyArticle article={getRandomArticles(articles, 1)[0]} />
-
         </div>
         <div className="vertical-line"></div>
         <div className="main-list">
             <div className="ad-container">
                 <img src={adEilatImg} />
             </div>
-
             <RealtyPreview />
             <div className="articles-list">
                 {getRandomArticles(articles, articlesAmount).map(item => {
                     return <RealtyArticle article={item} key={item._id} />
                 })}
             </div>
-
             <div className="ad-container second">
                 <img src={adSnowImg} />
             </div>
-
-
         </div>
-
     </section>
-
-
-
 }

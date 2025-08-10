@@ -1,7 +1,6 @@
 .home {
     display: grid;
     grid-template-columns: 1fr 1px 3fr;
-    margin-inline: em(360px);
     margin-bottom: em(100px);
     gap: 15px;
    
@@ -31,7 +30,7 @@
         .watched-articles {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: em(15px);
         }
 
         h3 {
@@ -42,6 +41,7 @@
         }
 
         .ad-container {
+            margin-block: em(15px);
             width: em(295px);
             height: em(370px);
 
@@ -52,18 +52,17 @@
     }
 
     .main-list {
-        
 
         .ad-container {
             height: em(213px);
-            width: em(850px);
+            width: em(873px);
         }
 
 
         .articles-list {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: em(5px);
+            gap: em(10px);
             margin-bottom: em(15px);
         }
     }

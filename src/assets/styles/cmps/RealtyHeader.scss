@@ -4,29 +4,23 @@
     display: flex;
     margin-bottom: 50px;
     background-color: $clr1;
-    justify-content: right;
+    justify-content: space-between;
     width: 100%;
     align-items: center;
-
-
-
-
-
+    grid-column: 1 / -1;
 
     .img-cont {
         background-color: white;
-
-        img {
-            height: em(68px);
-            margin: em(34px);
-
-        }
+        height: 100%;
+        padding: em(24px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 
     .header-main {
-        width: em(1850px);
-
+        width: 100%;
         .header-top {
             display: flex;
             justify-content: space-between;

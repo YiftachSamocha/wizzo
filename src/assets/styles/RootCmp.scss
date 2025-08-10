@@ -1,0 +1,14 @@
+.main-page {
+    display: grid;
+    grid-template-columns: 1fr em(1200px) 1fr;
+
+    >* {
+        grid-column: 2;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .main-page {
+        grid-template-columns: 1fr em(416px) 1fr;
+    }
+}

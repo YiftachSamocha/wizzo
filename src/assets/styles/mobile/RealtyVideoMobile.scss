@@ -1,8 +1,7 @@
 @media (max-width: $mobile-breakpoint) {
-
     .video {
-        padding-inline: em(18px);
         padding-block: em(130px);
+        grid-template-columns: 1fr em(416px) 1fr;
 
         .video-main {
             flex-direction: column;
@@ -14,13 +13,9 @@
                 margin-bottom: em(20px);
 
                 .video-cont {
-                    height: em(220px);
+                    height: em(222px);
 
-                    video {
-                       
-                        width: em(383px);
-                        height: auto;
-                    }
+                   
                 }
 
                 .video-info {
@@ -48,15 +43,22 @@
 
             .video-list {
                 order: 2;
-                .video-item{
-                    width: em(402px);
-                    .video-cont div{
-                        width: em(70px);
-                        height: em(25px);
-                        font-size: em(12px);
+
+                .video-item {
+                    width: em(416px);
+                    .video-cont{
+                        height: em(110px);
                     }
+
+                    .video-info {
+                        .title {
+                            font-size: em(16px);
+                        }
+
+                    }
+
                 }
-                
+
             }
         }
     }

@@ -9,7 +9,7 @@ import { RealtyFooter } from './cmps/RealtyFooter'
 
 
 export function RootCmp() {
-    return <div>
+    return <div className='main-page'>
         <RealtyHeader />
         <RealtyHome />
         <RealtyList />

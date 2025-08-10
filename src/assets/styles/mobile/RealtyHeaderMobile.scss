@@ -7,10 +7,11 @@
 
         .img-cont {
             background-color: inherit;
-            height: em(53px);
+            height: em(70px);
             width: em(150px);
             display: flex;
             justify-content: right;
+            padding: em(12px);
 
 
             img {
@@ -27,6 +28,7 @@
             justify-content: left;
             align-items: center;
             margin-left: em(10px);
+            cursor: pointer;
 
             img {
                 max-width: fit-content;

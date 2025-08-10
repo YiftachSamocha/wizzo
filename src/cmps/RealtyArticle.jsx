@@ -2,7 +2,6 @@ import articleImg from "../assets/img/article.jpg"
 import { getCategoryColor } from "../service"
 
 export function RealtyArticle({ article }) {
-
     return <div className="article">
         <div className="article-card">
             <img src={articleImg} alt="" />
@@ -13,8 +12,5 @@ export function RealtyArticle({ article }) {
             <p className="details">{article.date} | {article.writer}</p>
 
         </div>
-
-
-
     </div>
 }

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import doronImg from '../assets/img/doron.png'
 const article = {
     date: '11-06',
@@ -7,7 +6,6 @@ const article = {
     category: 'התחדשות עירונית',
     title: 'אושרה תוכנית העיצוב של צמח המרמן ואזורים למגדל יוקרה במתחם דפנה',
     description: 'כשנתיים לאחר הזכייה במכרז דיירים, אושרה תוכנית העיצוב האדריכלי לפרויקט פינוי-בינוי במסגרתו ייהרסו במרכז ת"א 66 דירות וייבנה מגדל בן 25 קומות'
-
 }
 
 export function RealtyPreview() {
@@ -22,7 +20,4 @@ export function RealtyPreview() {
             <div>{article.category}</div>
         </div>
     </section>
-
-
-
 }

@@ -2,8 +2,14 @@
     display: flex;
     flex-direction: column;
     background-color: $clr6;
-    padding-inline: em(360px);
     padding-block: em(112px);
+    grid-column: 1/ -1;
+    display: grid;
+    grid-template-columns: 1fr em(1200px) 1fr;
+
+    >* {
+        grid-column: 2;
+    }
 
     .category .title {
         color: white;
@@ -48,7 +54,7 @@
 
             .description {
                 color: white;
-                font-size: em(15px);
+                font-size: em(18px);
             }
         }
 
@@ -62,15 +68,31 @@
             .video-item {
                 background-color: $clr7;
                 display: flex;
-                width: em(617px);
+                width: em(590px);
                 height: em(183px);
                 justify-content: space-between;
                 padding: 12px;
                 gap: em(20px);
+                align-items: center;
 
-                video {
-                    width: em(278px);
+                .video-cont {
                     height: em(160px);
+
+                    video {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+            }
+
+
+            .video-info {
+                .title {
+                    font-size: em(18px);
+                }
+
+                .details {
+                    font-size: em(14px);
                 }
             }
 
@@ -78,46 +100,25 @@
 
         .video-preview {
             background-color: $clr7;
-            height: em(581px);
+            height: em(590px);
             width: em(617px);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             padding: em(10px);
 
+            .video-cont {
+                height: em(325px);
+            }
+
             video {
-                width: em(580px);
-                
-                
+
+                height: 100%;
+                width: auto;
             }
 
             .title {
-                font-size: em(25px);
-            }
-
-
-
-        }
-        .video-list{
-            .video-item{
-                width: em(395px);
-                height: em(148px);
-                align-items: center;
-                .video-cont{
-                    height: em(100px);
-                    video{
-                        height: 100%;
-                        width: auto;
-                    }
-                }
-            }
-            .video-info{
-                .title{
-                    font-size: em(14px);
-                }
-                .details{
-                    font-size: em(10px);
-                }
+                font-size: em(32px);
             }
         }
     }
