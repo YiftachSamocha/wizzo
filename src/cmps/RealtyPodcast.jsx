@@ -2,6 +2,14 @@ import podcasts from '../data/podcasts.json'
 import headphonesImg from '../assets/img/headphones.png'
 import playerImg from '../assets/img/player.png'
 import { RealtyCategory } from './RealtyCategory'
+import danImg from '../assets/img/podcast/dan.png'
+import davidImg from '../assets/img/podcast/david.png'
+import jacobImg from '../assets/img/podcast/jacob.png'
+
+podcasts[0].img = danImg
+podcasts[1].img = davidImg
+podcasts[2].img = davidImg
+podcasts[3].img = jacobImg
 
 export function RealtyPodacst() {
     return <section className="podcast">

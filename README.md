@@ -37,9 +37,9 @@ The website is fully responsive and works on mobile devices. Specific styles are
 
 ## How to Run
 1. Clone the repository.
-2. Install dependencies using `npm install`.
+2. Install dependencies using `npm i`.
 3. Start the development server with `npm run dev`.
-4. Open the website in your browser at `http://localhost:3000`.
+4. Open the website in your browser at `http://localhost:5173`.
 5. Alternatively, you can access the live version of the website hosted on Vercel at https://wizzo-33re-git-main-yiftachsamochas-projects.vercel.app.
 
 Enjoy exploring the real estate front-end

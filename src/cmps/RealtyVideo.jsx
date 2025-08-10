@@ -1,7 +1,17 @@
 import { RealtyCategory } from "./RealtyCategory"
-import VIDEOS_DATA from '../data/videos.json'
-const videos = VIDEOS_DATA.slice(1, 4)
-const videoPreview = VIDEOS_DATA.slice(0, 1)[0]
+import videosData from '../data/videos.json'
+import aaoraVid from '../assets/img/video/aaora.mp4'
+import conferenceVid from '../assets/img/video/conference.mp4'
+import easyVid from '../assets/img/video/easy.mp4'
+import lawVid from '../assets/img/video/law.mp4'
+
+videosData[0].url = aaoraVid
+videosData[1].url = conferenceVid
+videosData[2].url = lawVid
+videosData[3].url = easyVid
+
+const videos = videosData.slice(1, 4)
+const videoPreview = videosData.slice(0, 1)[0]
 
 export function RealtyVideo() {
     return <section className="video">
